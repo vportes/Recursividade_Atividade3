@@ -24,14 +24,18 @@ public class Main {
             System.out.print("Digite um número: ");
             try {
                 int numero = sc.nextInt();
-                //utilizar a função par()
-                System.out.println("\nO número " + numero + (par(numero) ? " é " : " não é ") + "par.");
-                //utilizar a função impar()
-                System.out.println("O número " + numero + (impar(numero) ? " é " : " não é ") + "impar.\n");
+                if (numero < 0) {
+                    System.out.println("Número negativo não é valido.\n");
+                } else {
+                    //utilizar a função par()
+                    System.out.println("\nO número " + numero + (par(numero) ? " é " : " não é ") + "par.");
+                    //utilizar a função impar()
+                    System.out.println("O número " + numero + (impar(numero) ? " é " : " não é ") + "impar.\n");
                 /*
                 System.out.println("O numero é par?" + par(numero));
                 System.out.println("O numero é impar?" + impar(numero));
                  */
+                }
             } catch (InputMismatchException e) {
                 System.out.println("Encerrando o programa.");
                 break;
